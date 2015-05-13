@@ -1,0 +1,613 @@
+<!--main.html-->
+<html> 
+
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link  rel="icon"  href="img/logo.png" type="image/x-icon" />
+
+<title>104年第五屆全國大專私校程式設計競賽在元智</title>
+<style type="text/css"> 
+<!-- 
+#floater {position:absolute; visibility:visible}
+--> 
+<!-- by梅問題範例--->
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		/*------------------------
+		---Scrolling animations---
+		-------------------------*/
+		.scrollimation.scale-in{
+			opacity:0;
+			-webkit-transform: scale(0.5);
+			-moz-transform: scale(0.5);
+			-ms-transform: scale(0.5);
+			transform:scale(0.5);
+			-webkit-transition: -webkit-transform .6s cubic-bezier(.17,.89,.67,1.57), opacity .6s ease-out;
+			transition: transform .6s cubic-bezier(.17,.89,.67,1.57), opacity .6s ease-out;
+		}
+
+		.scrollimation.scale-in.in{
+			opacity:2;
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-ms-transform: scale(1);
+			transform:scale(1);
+		}
+	<!-- by梅問題範例--->
+
+		a{
+			color:#0066FF;
+		}
+		a:hover{text-decoration:underline;}
+
+</style>
+
+<!-- 顯示/隱藏 div -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function toggle(targetid){
+    if (document.getElementById){
+        target=document.getElementById(targetid);
+            if (target.style.display=="block"){
+                target.style.display="none";
+            } else {
+                target.style.display="block";
+            }
+    }
+}
+-->
+</script>
+<style type="text/css">
+<!--
+#explain{
+background-color:#E8E8E8;
+height:400px;
+width:400px;
+display:none;
+margin-top:10px;
+margin-buttom:10px;
+border-style:dashed;
+border-width:5px;
+border-color:#363636;"
+}
+-->
+</style>
+<!-- 顯示/隱藏 div -->
+
+
+<!-- 跳過去 -->
+<script src="jquery.min.js" language="javascript"></script>
+<script language="javascript">
+function jumpw(){
+var r = confirm("開啟新分頁？");
+if(r)
+	window.open('http://blog.sina.com.cn/cjhwang','_new');
+else{};
+};
+
+
+$(function(){
+	$('#top').click(function(){
+		$('html,body').animate({scrollTop:'0px'},800);
+	});
+
+	$('#dNews').click(function(){
+		$('html,body').animate({scrollTop:$('#news').offset().top},800);
+	});
+	
+	$('#dInfo').click(function(){
+		$('html,body').animate({scrollTop:$('#info').offset().top},800);
+	});
+	
+	$('#dRule').click(function(){
+		$('html,body').animate({scrollTop:$('#rule').offset().top},800);
+	});
+	
+	$('#dJoin').click(function(){
+		$('html,body').animate({scrollTop:$('#join').offset().top},800);
+	});
+	
+	$('#dTime').click(function(){
+		$('html,body').animate({scrollTop:$('#time').offset().top},800);
+	});
+	
+	$('#dTraffic').click(function(){
+		$('html,body').animate({scrollTop:$('#traffic').offset().top},800);
+	});
+	
+	$('#dTid').click(function(){
+		$('html,body').animate({scrollTop:$('#tid').offset().top},800);
+	});	
+	
+	$('#dLink').click(function(){
+		$('html,body').animate({scrollTop:$('#link').offset().top},800);
+	});	
+	
+	$('#dAbout').click(function(){
+		$('html,body').animate({scrollTop:$('#about').offset().top},800);
+	});
+});
+</script>
+<!-- 跳過去 -->
+
+</head> 
+	
+<body bgcolor="#C4E1E1">
+<font face="微軟正黑體" size="3px">
+<div>	<!------ 彈跳語法 不是彈跳甲甲湯喔 ------>
+	<style>
+		.float{
+			position: fixed;
+			margin-top: -200px;
+			z-index: 9999;
+			right: -240px;
+			width: 350px; /* btn-width + box-width */
+			height: 400px; /* btn-height + box-height */
+			transition: right 0.5s ease-out;
+
+		}
+		.float:hover{
+			right: -130px;
+		}
+
+	</style>
+	
+	<div id="dNews" class="float" style="top:55%;" >
+		<a style="color:#0066FF; text-decoration:none;" href="#news"><img src="img/news_banner.png" width=240 height=70></a></br>
+	</div>
+	
+	<div id="dInfo" class="float" style="top:61%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#info"><img src="img/info_banner.png" width=240 height=70></a></br>
+	</div>
+	
+	<div id="dRule" class="float" style="top:67%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#rule"><img src="img/Rule_banner.png" width=240 height=70></a></br>
+	</div>
+	
+	<div id="dJoin" class="float" style="top:73%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#join"><img src="img/joinin_banner.png" width=240 height=70></a></br>
+	</div>
+	
+	<div id="dTime" class="float" style="top:79%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#time"><img src="img/timetable_banner.png" width=240 height=70></a></br>
+	</div>
+
+	<div id="dTraffic" class="float" style="top:85%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#traffic"><img src="img/traffic_banner.png" width=240 height=70></a></br>
+	</div>
+
+	<div id="dTid" class="float" style="top:91%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#tid"><img src="img/tidbits_banner.png" width=240 height=70></a></br>
+	</div>
+
+	<div id="dLink" class="float" style="top:97%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#link"><img src="img/link_banner.png" width=240 height=70></a></br>
+	</div>
+
+	<div id="dLink" class="float" style="top:103%;">
+		<a style="color:#0066FF; text-decoration:none;" onclick = "jumpw()" ><img src="img/blog_banner.png" width=240 height=70></a></br>
+	</div>
+	
+	<div id="dAbout" class="float" style="top:109%;">
+		<a style="color:#0066FF; text-decoration:none;" href="#about"><img src="img/about_banner.png" width=240 height=70></a></br>
+	</div>	
+</div>	<!------ 彈跳語法 不是彈跳甲甲湯喔 ------>
+	
+
+<div style="margin:0px auto; width:100%; height:24%;" align="center">
+<img src="img/banner.png" width=100% height=100%>
+</div>
+
+<div id="news"></div>
+<div class="scrollimation scale-in" > <!-- 最新消息 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000px; height:103px; margin-top:40px;">
+	<img src="img/news.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div id = "news" style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:30px;">
+	
+	<big>
+	　　報名時間：2015年5月15日起至2015年6月14日止，詳細請見ACM官方網站。</br></br>
+		</br>
+	</big>
+	
+	</div>
+	</div>
+
+<div id="info"></div>
+<div class="scrollimation scale-in"> <!-- 競賽資訊 -->
+	<!-- icon -->
+	
+	<div style="margin:0px auto; width:1000px; height:103px; margin-top:40px;">
+	<img src="img/info.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:0px;">
+		<font face="微軟正黑體">
+		</br><H2><center>第五屆全國私立大專校院程式競賽（NCPU）辦法</center></H2>
+
+		<big>
+		<ul>
+			<li>目的： 美國計算機協會（Association of Computing Machinery，ACM）之亞洲區協會為提升台灣私立大專校、院學生程式設計能力， 授權元智大學舉辦【第五屆全國私立大專校院程式競賽】（National Contests for Private Universities, NCPU）。競賽宗旨在於增進學生對於程式設計的興趣及提升程式設計能力。獲獎團隊有優渥的獎金和 ACM 獎狀，所有參賽者都會發給參賽證明，對未來升學或就業均有裨益，歡迎全國各私立大專校、院同學踴躍報名。</li></br>
+
+			<li>主辦：元智大學資訊工程學系。<br>
+			    協辦：ACM ICPC Contest Council for Taiwan，元智大學圖書資訊服務處。</li></br>
+
+			<li>競賽組別及參賽資格：</li>
+				<ol>
+				<li>對軟體設計具有興趣之私立大專校、院學生。</li>
+				<li>每隊須有 3 名隊員，得有 1 名預備隊員。</li>
+				</ol></br>
+				
+				<li>競賽辦法概要：（詳情請見競賽辦法。）</li>
+			
+				<ol>
+				<li>競賽試題以英文命題，試題至少 7 題。</li>
+				<li>競賽時間以 4 小時為原則；如遇特殊狀況，主辦單位得延長或縮短競賽時間。</li>
+				<li>競賽評分系統為 PC2 ，解題語言為： GNU C/C++、Microsoft C++ 以及 Java 。</li>
+				<li>本競賽採用ACM的評分方式，參賽隊伍以答對的題數（越多越好）及答題耗時（若比賽結束時一隊以上答對同樣題數，耗時越短越好）作為評定名次的主要依據。每次錯誤上傳均加計 20 分鐘該隊之答題耗時。（舉例來說，若有 A、B、C 三隊，分別答對 5、4、4 題，且答對最後一題之時間 3 小時 30 分、3 小時及 2 小時 50 分，但 B 隊答錯 2 次、C 隊答錯 3 次，則排名依次為 A、B（結算耗時 3 小時）、C（結算耗時 3 小時 10 分鐘）。）。</li>
+				<li>輸入與輸出資料全為純文字資料，每個輸入資料可能包含多組測試資料。</li>
+				<li>每隊限用 1 部電腦，由主辦單位提供。機器需於測試時間內測試完畢。</li>
+				</ol></br>
+
+			<li>獎勵方式</li>
+				<ol>
+				<li>第 一 名：獎金新台幣 10,000 元整及 ACM 獎狀。</li>
+				<li>第 二 名：獎金新台幣 5,000 元整及 ACM 獎狀。</li>
+				<li>第 三 名：獎金新台幣 3,000 元整及 ACM 獎狀。</li>
+				<li>佳作 三 名：各得獎金新台幣 1,000 元整及 ACM 獎狀。</li>
+				</ol></br>
+
+			<li>報名方式： 104 年 5 月 15 日至 6 月 14 日，請參見 ACM 官網或本站之報名指南，免費報名。主辦單位對報名之隊伍名稱有審查權，並得於必要時要求參賽隊伍更名。</li></br>
+
+			<li>競賽日期： 104 年 7 月 4 日（六）</li></br>
+
+			<li>競賽地點：元智大學五館</li></br>
+
+			<li>聯絡方式：</li>
+			<ul>
+			<li>電話：+886-3-4638800 轉 2352 蘇寧興助教</li>
+			<li>電子郵件：<a href="ncpu2015@saturn.yzu.edu.tw">黃柏鈞老師</a></li>
+			</ul> </br>
+		</ul>
+		</big>
+		</font>
+
+	</div>
+</div>
+
+<div id="rule"></div>
+<div class="scrollimation scale-in"> <!-- 競賽規則 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000px; height:103px; margin-top:40px;">
+	<img src="img/rule.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:30px;">
+
+		<font face="微軟正黑體"></br>
+
+		</font>
+		<ul>
+		<li><H3>必要參賽資格</H3></li>
+
+		<big>
+		<ol>
+		<li>私立大專校、院各科系學生皆可組隊參加。</li>
+		<li>每隊須有 3 名隊員，得有 1 名預備隊員。</li>
+		<li>每個學生每年只能代表一個學校。</li>
+		<li>參加 2 次以上之 ACM-ICPC 世界總決賽或參加 5 次以上之 ACM-ICPC 區域賽者不可參賽。</li>
+		<li>任何參賽隊員需符合以下任一條件方可參賽：</li>
+			<ul>
+			<li>西元 2011 年(含)後第 1 次入學大專院校者。</li>
+			<li>西元 1992 年(含)後出生者。</li>
+			<li>大專院校學生修業未滿 8 學期者。(包含 2 年制與 5 年制專科學校) </li>
+			</ul>
+		<li>參賽隊伍採自由報名，隊員不得跨隊、跨校報名，由私立大專院校教職員擔任教練，並至ACM官網進行報名登錄事宜。  </li>
+		<li>參賽當日請攜帶學生證，以便進行身份之查核。</li>
+		</ol>
+		</big></br>
+
+		<li><H3>競賽辦法</H3></li>
+		<big>
+		<ol>
+		<li>本競賽由 NCPU 命題委員會命題。</li>
+		<li>競賽使用的作業系統為 GNU/Linux；軟、硬體設備如本網頁之競賽環境說明，參賽隊員不得任意更改設定與破壞。</li>
+		<li>每一參賽隊伍僅可帶 A4 大小紙張 20 頁，且可事先在紙張單面上筆記，並於報到時將所攜文件核章備查；但不可攜帶任何自己的電腦、書籍、手冊、終端機、計算機、電子字典、隨身碟、平板電腦、智慧型手機、電子筆記本或 PDA，並嚴禁使用行動電話及呼叫器，以免干擾其他隊伍作答與影響公平性。</li>
+		<li>每隊須於全員到齊後始可進場，否則不得進場。</li>
+		<li>承辦單位有權臨機處理比賽中的突發狀況，惟競賽題目與評分由裁判作決定，且其決定即為最後結論，參賽者或教練不得對裁判決定提出異議。</li>
+		<li>參賽隊伍除與同隊隊員交談或經由承辦單位指定之工作人員及系統維護人員請教系統相關問題，如系統錯誤訊息等，不得與其他人員或不同隊之參賽隊員互相研討、觀看。</li>
+		<li>同隊參賽隊員請務必小聲討論，以不影響其他隊伍為原則。</li>
+		<li>競賽進行中，參賽隊員可至試場外指定區域飲用茶水、食用點心與如廁，惟不得與他人研討試題。</li>
+		<li>參賽隊伍有任何違反競賽規則或破壞競賽秩序的行為，情節嚴重者，得由競賽主席宣佈取消該隊競賽資格。</li>
+		<li>報到務必攜帶學生證，否則無法參加，開始後比賽，遲到 20 分鐘以上的隊伍不得進場。</li>
+		<li>其他事項可見本網站。</li>
+		<li>賽場注意事項：</li>
+			<ul>
+			<li>不得吃食物與飲用白開水以外之飲品，請保持試場內之清潔。</li>
+			<li>請保持小聲量，避免影響其他參賽隊伍。</li>
+			<li>每隊共用 1 部承辦單位提供之電腦。</li>
+			<li>假如有任何系統與軟、硬體問題，請舉手通報，將有工作人員為您處理。</li>
+			<li>所有參賽者列印之文件，將有專門工作人員送達您隊伍的位置。</li>
+			</ul>
+		<li>其他未盡事項將於本網站隨時更新，或請洽詢<a style="color:#0066FF; text-decoration:none;" href="mailto:ncpu2015@saturn.yzu.edu.tw">ncpu2015@saturn.yzu.edu.tw</a>。</li>
+		</ol>
+		</ul>
+		</big></br>
+	
+	</div>
+</div>
+
+<div id="join"></div>
+<div class="scrollimation scale-in"> <!-- 註冊報名指南 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000px; height:103px; margin-top:40px;">
+	<img src="img/joinin.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:30px;">
+
+		<font face="微軟正黑體"></br>
+
+		<big>
+		請參見本競賽之<a href="http://icpc.baylor.edu/regionals/finder/taiwan-national-2015">ACM 官網頁面</a>進行報名。
+		此頁將公布註冊之流程供參。
+		</big>
+
+		</font>	
+		</br>
+		
+	</div>
+</div>
+	
+<div id="time"></div>
+<div class="scrollimation scale-in"> <!-- 競賽時程 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000px; height:103px; margin-top:40px; ">
+	<img src="img/timetable.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:30px;">
+
+		<font face="微軟正黑體"></br>
+		</font>	
+
+		<table width ="80%" align="center" rules="all" style= "border: 3px solid black;"cellpadding='5'>
+			<tbody align="center" >		<big>
+			<tr>
+				<th>日期</th><th>時間</th><th>行程</th><th>地點</th><th>備註</th>
+			</tr>
+			<tr>
+				<td rowspan='9' >2015/7/4</br>(六)</td><td >9:00</br>｜</br>9:30</td><td>報到</td><td>五館一樓中庭</td><td></td>
+			</tr>
+			<tr>
+				<td>9:30</br>｜</br>10:00</td><td>開幕式與</br>賽前說明</td><td>有庠廳</td><td></td>
+			</tr>
+			<tr>
+				<td>10:00</br>｜</br>11:00</td><td>環境測試</td><td>五館電腦教室</td><td></td>
+			</tr>
+			
+			<tr>
+				<td rowspan = 2>11:00</br>｜</br>12:00</td><td>環境重置</td><td>五館電腦教室</td><td></td>
+			</tr>
+			<tr>
+				<td>午餐</td><td>現場將有工作人員及路標引導。</td><td></td>
+			</tr>
+			<tr>
+				<td>12:00</br>｜</br>12:30</td><td>入場與</br>身分查驗</td><td>五館電腦教室</td><td></td>
+			</tr>
+			<tr>
+				<td>12:30</br>｜</br>16:30</td><td>競賽時間</td><td>五館電腦教室</td><td></td>
+			</tr>
+			<tr>
+				<td>16:30</br>｜</br>16:50</td><td>評審會議</td><td>五館電腦教室</td><td></td>
+			</tr>
+			<tr>
+				<td>16:50</br>｜</br>17:30</td><td>頒獎典禮</td><td>有庠廳</td><td></td>
+			</tr>
+			</tbody>		</big>
+		</table>
+
+		</br></br>
+	</div>
+</div>
+
+<div id="traffic"></div>
+<div class="scrollimation scale-in"> <!-- 交通資訊 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000px; height:103px; margin-top:40px;">
+	<img src="img/traffic.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:0px;">
+
+		<font face="微軟正黑體"></br>
+
+
+
+		<big>
+		<ul>
+		<li>比賽當日若為自行開車到場，請來信索取校園停車證(ncpu2015@saturn.yzu.edu.tw)</li></br>
+
+		<li>搭乘火車</li>
+		<ul>
+		<li>南下→內壢車站：</li>
+		　可搭通勤電車至內壢車站下車(或搭對號快車至中壢或桃園車站下車再換搭通勤電車或公車)。
+
+		<li>北上→內壢車站：</li>
+		　新竹以北，可搭通勤電車至內壢車站下車(或搭對號快車至中壢或桃園車站下車再換搭通勤電車或公車)。
+
+		<li>內壢站→元智大學：</li>
+		　往北(右)步行約五分鐘，則可看見中華路與遠東路口有元智大學指示牌，右轉過平交道，再沿右邊步行約十分鐘即可抵達。　
+
+		<li><a style="color:#0066FF; text-decoration:none;" target="_new" href="http://twtraffic.tra.gov.tw/twrail/">臺灣鐵路局車班查詢</a></li>
+		<ul>
+		<li>台北到內壢站通勤電車全票：新台幣51元。</li>
+		<li>新竹到內壢站通勤電車全票：新台幣63元。</li>
+		</ul>
+		</ul>
+		</br>
+		<li>搭乘公車</li>
+		<ul>
+		<li>155(原中壢5甲)、156(原中壢5乙)路公車：在中壢車站搭乘155、156路桃園客運直接坐到元智大學內。</li>
+		<li>1路公車：在中壢或桃園車站搭乘1路桃園客運，在元智大學站（中壢往桃園）或內壢火車站（桃園往中壢）下車，再沿中華路往桃園方向前行至遠東路與中華路交叉口，右轉過平交道，再沿右邊步行約十分鐘即可抵達。</li>
+		</ul>
+		</br>
+
+		<li>自行開車</li></br>
+		<ul>
+		<li>北上→中壢交流道</li>
+		　高速公路：過中壢/新屋交流道後，靠右線行駛，準備在中壢
+		　交流道（58公里出口）下高速公路。
+
+		<li>南下→中壢交流道</li>
+		　高速公路：過中壢休息站（約54公里處）後，靠右線行駛，準備在中壢交流道（56公里出口）下高速公路。
+
+		<li>中壢交流道→元智大學</li>
+		　下高速公路後順路直行約3.6公里後銜接台一線省道（即中華路）左轉往桃園方向行駛，前行約2公里後會經過內壢火車站。過內壢火車站後約五百公尺，可看見中華路與遠東路口之元智大學路標，右轉過平交道，沿右邊前行約五百公尺距離，左邊即是元智大學。
+
+		<li>內壢交流道→元智大學</li>
+		　行高速公路南下五十六公里，或北上五十七公里處，下內壢交流道，經縱貫公路往桃園方向，過內壢火車站後按路標指示右轉。
+
+		<li>南桃園交流道→元智大學</li>
+		　行高速公路下南桃園交流道，往南經文中路、龍壽街，或往北走國際路均可至縱貫公路右轉，往中壢方向按路標指示左轉。
+		</ul>
+		</ul>
+		</big>
+		</font></br>
+	
+
+		
+	</div>
+</div>
+
+<div id="tid"></div>
+<div class="scrollimation scale-in"> <!-- 競賽花絮 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000; height:103px; margin-top:40px;">
+	<img src="img/Tidbits.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:30px;">
+
+		<font face="微軟正黑體"></br>
+
+		<big>敬請期待...</big>
+
+		</font>	
+		</br>
+		
+	</div>
+</div>
+
+<div id="link"></div>
+<div class="scrollimation scale-in"> <!-- 友站連結 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000; height:103px; margin-top:40px;">
+	<img src="img/link.png" width=1000 height=102 >
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:30px;">
+
+		<font face="微軟正黑體">
+		<big>
+		<ul>
+			<li><a target="_new" style="color:#0066FF; text-decoration:none;" href="http://ncpu2014.pu.edu.tw/">2014年 NCPU在靜宜大學</a></li></br>
+			<li><a target="_new" style="color:#0066FF; text-decoration:none;" href="http://ncpu2013.cgu.edu.tw/">2013年 NCPU在長庚大學</a></li></br>
+			<li><a target="_new" style="color:#0066FF; text-decoration:none;" href="http://ncpu2012.mcu.edu.tw/">2012年 NCPU在銘傳大學</a></li></br>
+			<li><a target="_new" style="color:#0066FF; text-decoration:none;" href="http://ncpu2011.chu.edu.tw/">2011年 NCPU在中華大學</a></li></br>
+			<li><a target="_new" style="color:#0066FF; text-decoration:none;" href="http://blog.sina.com.cn/cjhwang">黃金雄教授的部落格</a></li></br></br>
+		</ul>
+		</big>
+		</font>
+
+		
+	</div>
+</div>
+
+<div id="about"></div>
+<div class="scrollimation scale-in"> <!-- 關於我們 -->
+	<!-- icon -->
+	<div style="margin:0px auto; width:1000px; height:103px; margin-top:40px;">
+	<img src="img/about.png"  width=1000 height=102>
+	</div>
+	<!-- contents -->
+	<div style="background-color:#C4E1E1; margin:0px auto; width:1000px;  margin-top:30px;">
+	
+		<font face="微軟正黑體"></br>
+
+		<big>
+
+		<table border="0">
+		<tr><td>
+		<table border="0">
+		<tr><td><big>
+		</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「元智」這個圖騰說明著緣起一切，猶如花木之逢春葳蕤，川流之起始源泉，羔羊之跪乳反哺。元智的成立，是一個感恩的故事，感恩於父母、社會、以及國家，於企業卓然有成之時，完成一個回饋的心願。</br></big></tr></td>
+		<tr><td><big>
+		</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元智大學乃是遠東關係企業創辦人徐有庠先生為追懷親恩及秉承「己欲立而立人、己欲達而達人」之庭訓，遂於歷經五十寒暑創業有成之後，懷抱「回饋社會、為國育才」的心念，同時還報「有庠」命名，蘊含一段「教育」的因緣。</br></big></td></tr>
+		<tr><td><big>
+		</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元智的命名，乃以創辦人先君「元智」公名諱為名；同時「元」乃易經乾卦四德之首，「智」乃古代君子四端之末，以「元智」二字為校名，象徵與實質意義十分遠大。</br></big></td></tr>
+		</table>
+		</td>
+		<td><img src="img/yzu.jpg" width=240 height=160></td></tr>
+		</table>
+
+		</br><H2><center>～關於元智大學資訊工程系～</center></H2></br>
+
+		<table>
+		<tr><td>
+		<ul>
+		<big>
+		<li>概況</li></br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元智大學資訊工程系是元智大學創校時即成立的系所之一。1989年成立大學部；1991年成立研究所碩士班；1995年增設博士班；1998年再增設碩士在職進修專班;並於1999年成立資訊網路技術系；2008年成立生物與醫學資訊碩士學程;2010年資訊網路技術系已停止招生。創系以來畢業系友超過3000人，無論進修深造或參與高科技研發行銷，皆表現優異，深獲好評。</br>
+		</br>　　目前本系年招收大學部學生約150人，碩士一般生約55人，碩士在職專班約42人，博士班學生約10人，本系現有專任教師26位，教授共有8位，副教授8位，助理教授10位。</br>
+		</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本系大學部學生不僅需修習資工專業課程，為加強理論與實務之結合，同學更可選擇修習為時兩學期之專業實習，同學於大三、四下期間，每週有一半時間在校外公司實習，另一半時間在校修課，寒暑假可全日於實習公司工作，推行以來成效卓著。</br>
+		</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我們的願景是成為全國教師教學最紮實與學生學習最確實的系所之一，讓本系每一位學生擁有厚實的資工專業能力。</br>
+		</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在研究表現上，我們希望能在資訊領域方面世界排名進入100名。</br>
+		</br></br>
+		<li>特色</li>
+		</br>本系教學及研究領域涵蓋資訊科學六大相關領域，主要包括：
+		<ol>
+		<li>IC設計與內嵌式系統</li>
+		<li>軟體方法論及系統</li>
+		<li>網路、行動與雲端計算</li>
+		<li>多媒體系統、人機互動與感知計算</li>
+		<li>計算智慧與學習科技</li>
+		<li>生物與醫學資訊。</li></br>
+		</ol>
+		　　近年更發展「跨領域」整合型研究，例如：大數據分析、寬頻無線通訊軟體、4C科技整合、SOC設計、數位內容及開放原始碼等大型研究計劃。</br></br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本系9-12個月之專業實習課程，自1992年施行以來，成效卓越，深受學生及企業肯定。大學部學生可以選修全年兩學期的校外實習課程。並同時鼓勵研究生多參與產學合作研究計畫，深入瞭解高科技產品研發及行銷的過程與產業脈動。</br></br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;致力於提升學生的外語能力及國際觀，邁向國際化。除了積極推動專業課程英語教學及鼓勵畢業論文必須以英文寫作外，並大規模補助學生短期出國學習參訪或參加國際學術會議。</br></br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重視師生互動，培養學生團隊精神及發展人際關係的能力。除了落實導師制度外，並建立完整的研究生助教制度，支援大學部學生課後輔導，確保本系的教育品質。</br></br>
+		</big>
+		</ul>
+		</tr></td>
+		</table>
+		
+		</big>
+
+		</font>
+
+
+		
+	</div>
+</div>	
+
+
+
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="waypoints.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.scrollimation').height($("news").height());
+		$('.scrollimation').waypoint(function(){
+			$(this).addClass('in');
+		},{offset:'90%'});
+	});
+</script>
+</font>
+</body> 
+</html>
