@@ -32,7 +32,7 @@ img
 h1, h2, h3, h4, h5, h6 
 { font: normal 175% 'News Cycle', Arial, sans-serif;
   color: #000;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   margin: 0 0 10px 0;}
 
 h2
@@ -108,7 +108,7 @@ nav
   
 #welcome_slogan H3
 { font: bold 250% 'News Cycle', Arial, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   color: #FFF;} 
   
 #menubar
