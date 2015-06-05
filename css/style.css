@@ -107,8 +107,8 @@ nav
   margin: 0 auto;}    
   
 #welcome_slogan H3
-{ font: bold 300% 'News Cycle', Arial, sans-serif;
-  letter-spacing: -3px;
+{ font: bold 250% 'News Cycle', Arial, sans-serif;
+  letter-spacing: 1px;
   color: #FFF;} 
   
 #menubar
