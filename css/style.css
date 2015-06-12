@@ -95,7 +95,7 @@ nav
   
 #strapline
 { width: 940px;
-  height: 80px;
+  height: 90px;
   text-align: center; 
   margin: 0 auto;} 
   
@@ -124,7 +124,7 @@ ul#nav
 ul#nav li
 { padding: 0 0 0 0px;
   list-style: none;
-  margin: 2px 0 0 0;
+  margin: 5px 0 0 0;
   display: inline;
   background: transparent;}
 
