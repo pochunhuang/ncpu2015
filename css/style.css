@@ -132,9 +132,9 @@ ul#nav li a
 { float: left;
   font: bold 130% 'News Cycle', Arial, sans-serif;
   height: 24px;
-  margin: 8px 20px 0 0;
+  margin: 8px 10px 0 0;
   text-shadow: 0px 1px 0px #000;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 15px 10px 15px;
   background: transparent; 
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
